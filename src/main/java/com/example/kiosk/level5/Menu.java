@@ -28,6 +28,7 @@ public class Menu {
     }
 
     public void printAllMenuItem() {
+        System.out.println("[ " + category +"MENU ]");
         for (int i = 0; i < menuItemList.size(); i++) {
             System.out.println((i + 1) + menuItemList.get(i).printMenuItem());
         }

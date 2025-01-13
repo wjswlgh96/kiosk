@@ -2,6 +2,7 @@ package com.example.kiosk.level4;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Menu {
     private final MenuCategory category;
@@ -28,6 +29,7 @@ public class Menu {
     }
 
     public void printAllMenuItem() {
+        System.out.println("[ " + category +"MENU ]");
         for (int i = 0; i < menuItemList.size(); i++) {
             System.out.println((i + 1) + menuItemList.get(i).printMenuItem());
         }

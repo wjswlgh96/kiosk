@@ -30,6 +30,7 @@ public class Menu {
     }
 
     public void printAllMenuItem() {
+        System.out.println("[ " + category +"MENU ]");
         AtomicInteger idx = new AtomicInteger(1);
         menuItemList.forEach((value) -> {
             System.out.println((idx.get()) + ". " + value.printMenuItem());
