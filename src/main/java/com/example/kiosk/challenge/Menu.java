@@ -2,6 +2,7 @@ package com.example.kiosk.challenge;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Menu {
 
@@ -29,8 +30,10 @@ public class Menu {
     }
 
     public void printAllMenuItem() {
-        for (int i = 0; i < menuItemList.size(); i++) {
-            System.out.println((i + 1) + ". " + menuItemList.get(i).printMenuItem());
-        }
+        AtomicInteger idx = new AtomicInteger(1);
+        menuItemList.forEach((value) -> {
+            System.out.println((idx.get()) + ". " + value.printMenuItem());
+            idx.getAndIncrement();
+        });
     }
 }
