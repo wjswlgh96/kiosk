@@ -30,7 +30,7 @@ public class Kiosk {
 
                 if (!order.isOrderListEmpty()) {
                     System.out.println();
-                    order.printOrderMenu(menuList.size());
+                    order.displayOrderMenu(menuList.size());
                 }
 
                 final int MENU_OPTION_COUNT = menuList.size();
@@ -107,7 +107,7 @@ public class Kiosk {
                     System.out.println("아래와 같이 주문 하시겠습니까?");
                     System.out.println();
 
-                    order.printOrderList();
+                    order.displayOrderList();
                     BigDecimal totalPrice = order.getTotalPrice();
                     input = sc.nextLine();
                     int selectOrderMenu = Integer.parseInt(input);

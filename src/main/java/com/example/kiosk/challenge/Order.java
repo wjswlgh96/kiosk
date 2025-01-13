@@ -20,7 +20,7 @@ public class Order {
         return orderList.isEmpty();
     }
 
-    public BigDecimal  getTotalPrice() {
+    public BigDecimal getTotalPrice() {
         BigDecimal bd = new BigDecimal(totalPrice);
         bd = bd.setScale(2, RoundingMode.HALF_UP);
         return bd;
@@ -62,7 +62,7 @@ public class Order {
         orderList.clear();
     }
 
-    public void printOrderMenu(int startIndex) {
+    public void displayOrderMenu(int startIndex) {
         System.out.println("[ ORDER MENU ]");
         System.out.println((startIndex + 1) + ". Orders\t| 장바구니를 확인 후 주문합니다.");
         System.out.println((startIndex + 2) + ". Cancel\t| 진행중인 주문을 취소합니다.");
@@ -81,7 +81,7 @@ public class Order {
         totalPrice = sum;
     }
 
-    public void printOrderList() {
+    public void displayOrderList() {
         printAllOrderList();
 
         System.out.println();
