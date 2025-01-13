@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Kiosk {
 
-    private List<Menu> menuList;
+    private final List<Menu> menuList;
 
     public Kiosk(List<Menu> menuList) {
         this.menuList = menuList;

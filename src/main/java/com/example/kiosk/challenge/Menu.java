@@ -1,9 +1,10 @@
-package com.example.kiosk.level5;
+package com.example.kiosk.challenge;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Menu {
+
     private final MenuCategory category;
     private final List<MenuItem> menuItemList = new ArrayList<>();
 
@@ -29,7 +30,7 @@ public class Menu {
 
     public void printAllMenuItem() {
         for (int i = 0; i < menuItemList.size(); i++) {
-            System.out.println((i + 1) + menuItemList.get(i).printMenuItem());
+            System.out.println((i + 1) + ". " + menuItemList.get(i).printMenuItem());
         }
     }
 }
